@@ -1,0 +1,25 @@
+
+package hust.soict.hedpsi.swing;
+
+import java.awt.Frame;
+import java.awt.TextField;
+
+/**
+ * @author NamNV
+ *
+ */
+public class AWTAccumulator extends Frame {
+	private TextField tfInput;
+	private TextField tfOutput;
+	private int sum = 0;
+
+	public AWTAccumulator() {
+		setLayout(new GridLayout(2, 2));
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

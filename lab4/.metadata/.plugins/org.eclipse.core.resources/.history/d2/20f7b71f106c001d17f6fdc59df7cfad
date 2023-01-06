@@ -1,0 +1,34 @@
+
+public class TestPassingParameter{
+    public static void main(String[] args){
+        DigitalVideoDisc jungLeDVD= new DigitalVideoDisc("Jungle");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
+       
+        DVDWrapper wD1= new DVDWrapper(jungLeDVD);
+        DVDWrapper wD2= new DVDWrapper(cinderellaDVD);
+        swap(wD1,wD2);
+        System.out.println("jungle dvd title: "+jungLeDVD.getTitle());
+        System.out.println("Cinderella dvd title: "+cinderellaDVD.getTitle());
+
+        changeTitle(jungLeDVD,cinderellaDVD.getTitle());
+        System.out.println("jungle dvd title: "+jungLeDVD.getTitle());
+    }
+    public static void changeTitle(DigitalVideoDisc dvd,String title){
+        String oldTitle = dvd.getTitle();
+        dvd.setTitle(title);
+        dvd  = new DigitalVideoDisc(oldTitle);
+    }
+    public static void swap(DVDWrapper dvd1,DVDWrapper dvd2){
+    	DigitalVideoDisc temp=dvd1.innerObject;
+        dvd1.innerObject= dvd2.innerObject;
+        dvd2.innerObject= temp;
+    }
+    static class DVDWrapper{
+    	DigitalVideoDisc innerObject;
+    	public DVDWrapper(DigitalVideoDisc innerObject) {
+    		this.innerObject=innerObject;
+    	}
+    }
+  
+    
+}

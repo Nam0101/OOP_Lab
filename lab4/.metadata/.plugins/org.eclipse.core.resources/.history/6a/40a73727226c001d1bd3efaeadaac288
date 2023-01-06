@@ -1,0 +1,8 @@
+
+public class Store {
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+	public void adđVD(DigitalVideoDisc dvd) {
+		
+	}
+}

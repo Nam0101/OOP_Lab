@@ -1,0 +1,15 @@
+
+public class Store {
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+	private int qtyOrdered = 0;
+	public void adđVD(DigitalVideoDisc dvd) {
+		if (qtyOrdered == MAX_NUMBERS_ORDERED - 1) {
+			System.out.println("The cart is almost full");
+		} else {
+			itemsOdered[qtyOrdered] = disc;
+			qtyOrdered++;
+			System.out.println("The disc has been added");
+		}
+	}
+}

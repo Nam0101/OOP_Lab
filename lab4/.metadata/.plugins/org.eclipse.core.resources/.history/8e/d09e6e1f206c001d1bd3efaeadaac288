@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class CartTest {
+	public static void main(String[] args) {
+		Cart cart = new Cart();
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		cart.addDigitalVideoDisc(dvd1);
+		cart.addDigitalVideoDisc(dvd2);
+		cart.addDigitalVideoDisc(dvd3);
+		cart.print();
+		System.out.println("Enter an ID: ");
+		Scanner sc = new Scanner(System.in);
+		int idFind = sc.nextInt();
+		DigitalVideoDisc dsc= cart.findByID(idFind);
+		if(dsc==null) {
+			System.out.println("Not Found!");
+		}
+		else {
+			System.out.println("Founded:");
+			System.out.println("------------------------------------------------");
+			System.out.println("Title:" + dsc.getTitle());
+			System.out.println("Category:" + dsc.getCategory());
+			System.out.println("Director:" + dsc.getDirector());
+			System.out.println("Length:" + dsc.getLength());
+			System.out.println("Cost:" + dsc.getCost());
+			System.out.println("------------------------------------------------");
+		}
+		System.out.println("Enter title: ");
+		Scanner titleFindSC = new Scanner(System.in);
+		String titleFind = titleFindSC.next();
+		DigitalVideoDisc dvdRemove = cart.findByTitle(titleFind);
+		if(dvdRemove==null) {
+			System.out.println("Not Found!");
+		}
+		else {
+			System.out.println("Founded:");
+			System.out.println("------------------------------------------------");
+			System.out.println("Title:" + dsc.getTitle());
+			System.out.println("Category:" + dsc.getCategory());
+			System.out.println("Director:" + dsc.getDirector());
+			System.out.println("Length:" + dsc.getLength());
+			System.out.println("Cost:" + dsc.getCost());
+			System.out.println("------------------------------------------------");
+		}
+	}
+	
+
+}

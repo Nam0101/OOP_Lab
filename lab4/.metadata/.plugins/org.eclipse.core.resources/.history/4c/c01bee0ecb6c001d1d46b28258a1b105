@@ -1,0 +1,30 @@
+package hust.soict.dsai.garbage;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import javax.print.DocFlavor.INPUT_STREAM;
+
+public class GarbageCreator {
+	public static void main(String[] args) {
+
+	String fileName="IMG_20201006_191353.jpg";
+	byte[] inputBytes= {0};
+	long startTime,endTime;
+	
+	try {
+		inputBytes= Files.readAllBytes(Paths.get(fileName));
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	startTime = System.currentTimeMillis();
+	String outString ="";
+	for(byte b : inputBytes) {
+		outString+=(char)b;
+	}
+	endTime=System.currentTimeMillis();
+	System.out.println(endTime-startTime);
+	}
+}

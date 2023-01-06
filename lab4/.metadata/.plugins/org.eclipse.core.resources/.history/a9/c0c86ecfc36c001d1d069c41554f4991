@@ -1,0 +1,31 @@
+package hust.soict.dsai.aims.store;
+
+public class Store {
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+	private int qtyStore = 0;
+	public void adđVD(DigitalVideoDisc dvd) {
+		if (qtyStore == MAX_NUMBERS_ORDERED - 1) {
+			System.out.println("The cart is almost full");
+		} else {
+			itemsInStore[qtyStore] = dvd;
+			qtyStore++;
+			System.out.println("The disc has been added");
+		}
+	}
+	public void removeDVD(DigitalVideoDisc dvd) {
+		for (int i = 0; i < qtyStore; i++) {
+			if (itemsInStore[i].equals(dvd)) {
+				if (i == qtyStore - 1) {
+					qtyStore--;
+				} else {
+					for (int j = i + 1; j < qtyStore; j++) {
+						itemsInStore[j] = itemsInStore[j - 1];
+					}
+					qtyStore--;
+				}
+				System.out.println("The disc has been removed");
+			}
+		}
+	}
+}

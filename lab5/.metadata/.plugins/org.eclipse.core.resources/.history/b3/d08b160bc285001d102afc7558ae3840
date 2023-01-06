@@ -1,0 +1,16 @@
+
+package hust.soict.hedpsi.swing;
+
+/**
+ * @author NamNV
+ *
+ */
+public class AWTAccumulator extends Frame {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

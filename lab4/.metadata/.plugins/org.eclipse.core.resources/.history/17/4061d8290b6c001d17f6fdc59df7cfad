@@ -1,0 +1,14 @@
+
+public class DVDWrapper {
+		DigitalVideoDisc dsc;
+		public DVDWrapper(DigitalVideoDisc dsc) {
+			this.dsc=dsc;
+		}
+		DigitalVideoDisc getDigitalVideoDisc() {
+			return this.dsc;
+		}
+		public void setDigitalVideoDisc(DigitalVideoDisc dsc) {
+			this.dsc=dsc;
+		}
+		
+}

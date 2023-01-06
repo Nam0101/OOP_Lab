@@ -1,0 +1,7 @@
+
+public class DVDWrapper {
+		DigitalVideoDisc dsc;
+		public DVDWrapper(DigitalVideoDisc dsc) {
+			this.dsc=dsc;
+		}
+}
